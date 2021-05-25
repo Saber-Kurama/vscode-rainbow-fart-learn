@@ -3,7 +3,7 @@
     "name": "vscode-rainbow-fart-learn",
 	"displayName": "vscode-rainbow-fart-learn",
 	"description": "vscode rainbow fart learn",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.56.0"
 	},
@@ -14,13 +14,13 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:vscode-rainbow-fart-learn.helloWorld"
+        "onCommand:rainbow-fart-learn.enable"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vscode-rainbow-fart-learn.helloWorld",
+				"command": "rainbow-fart-learn.enable",
 				"title": "Hello World"
 			}
 		]
