@@ -1,10 +1,14 @@
 {
-  "name": "vscode-rainbow-fart-learn",
+	"publisher": "saber",
+    "name": "vscode-rainbow-fart-learn",
 	"displayName": "vscode-rainbow-fart-learn",
 	"description": "vscode rainbow fart learn",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.56.0"
+	},
+	"repository": {
+		"url": "https://github.com/Saber-Kurama/vscode-rainbow-fart-learn"
 	},
 	"categories": [
 		"Other"
