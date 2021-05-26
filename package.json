@@ -3,7 +3,7 @@
 	"name": "vscode-rainbow-fart-learn",
 	"displayName": "vscode-rainbow-fart-learn",
 	"description": "vscode rainbow fart learn",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.56.0"
 	},
@@ -26,17 +26,21 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "yarn run package",
+		"vscode:prepublish": "npm run build:package",
 		"compile": "webpack",
 		"watch": "webpack --watch",
 		"package": "webpack --mode production --devtool hidden-source-map",
+		"clean": "rm -rf dist",
+		"build:page": "npx parcel build src/page/src/index.html -d dist/page/dist --cache-dir src/page/.cache --no-minify",
+		"build:package": "npm run clean && npm run package && npm run build:page && node scripts/after-build.js",
 		"test-compile": "tsc -p ./",
 		"test-watch": "tsc -watch -p ./",
-		"pretest": "yarn run test-compile && yarn run lint",
+		"pretest": "npm run test-compile && npm run lint",
 		"lint": "eslint src --ext ts",
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
+		"@qiqi1996/qi-design-vue": "^0.10.3",
 		"@types/express": "^4.17.12",
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.0.4",
@@ -44,13 +48,20 @@
 		"@types/vscode": "^1.56.0",
 		"@typescript-eslint/eslint-plugin": "^4.14.1",
 		"@typescript-eslint/parser": "^4.14.1",
+		"@vue/component-compiler-utils": "^3.2.0",
+		"axios": "^0.21.1",
 		"eslint": "^7.19.0",
+		"fs-extra": "^10.0.0",
 		"glob": "^7.1.6",
+		"less": "^4.1.1",
 		"mocha": "^8.2.1",
 		"parcel-bundler": "^1.12.5",
 		"ts-loader": "^8.0.14",
 		"typescript": "^4.1.3",
 		"vscode-test": "^1.5.0",
+		"vue": "^2.6.12",
+		"vue-i18n": "^8.24.4",
+		"vue-template-compiler": "^2.6.12",
 		"webpack": "^5.19.0",
 		"webpack-cli": "^4.4.0"
 	},

@@ -3,3 +3,6 @@ dist
 node_modules
 .vscode-test/
 *.vsix
+src/page/.cache/
+package-lock.json
+yarn.lock
