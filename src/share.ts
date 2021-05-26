@@ -12,6 +12,8 @@ export default {
   maindata: [] as any[],
   playVoiceRes: null as any,
 
+  showTip: () => {},
+
   setPath(globalPath: string) {
     this.PATH_GLOBAL = globalPath;
     this.PATH_TMP = path.resolve(globalPath, "temp");

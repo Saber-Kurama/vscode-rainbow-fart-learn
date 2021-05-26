@@ -6,6 +6,7 @@ import share from './share';
 import settings from './settings';
 import assets from './assets';
 import inputHook from './inputHook';
+import service from './services';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -20,6 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
 		settings.load();
 		assets.init();
 		inputHook();
+		service();
 	})
 }
 
