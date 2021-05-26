@@ -5,6 +5,7 @@ import commands from './commands';
 import share from './share';
 import settings from './settings';
 import assets from './assets';
+import inputHook from './inputHook';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -18,6 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 		console.log('开始完成代码');
 		settings.load();
 		assets.init();
+		inputHook();
 	})
 }
 
